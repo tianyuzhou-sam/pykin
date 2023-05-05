@@ -2,7 +2,7 @@
 
 [![PyPI version](https://badge.fury.io/py/pykin.svg)](https://badge.fury.io/py/pykin)  [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-Python Interface for the robot Kinematics library pykin
+Python Interface for the robot Kinematics library pykin. Modified version with Kinova Gen 3 Lite.
 
 This library has been created simply by referring to <a href="https://github.com/Phylliade/ikpy.git" target="_blank">ikpy</a> and <a href="https://github.com/neka-nat/kinpy" target="_blank">kinpy</a> .
 
@@ -59,18 +59,12 @@ You need a [python-fcl](https://github.com/BerkeleyAutomation/python-fcl) packag
 
 **pykin** supports macOS and Linux on Python 3.
 
-- Install from pip
+- Install from source
 
   ~~~shell
-  $ pip3 or pip install pykin
-  ~~~
-
-- Install from source **[recommend]**
-
-  ~~~shell
-  $ git clone https://github.com/jdj2261/pykin.git
+  $ git clone https://github.com/tianyuzhou-sam/pykin.git
   $ cd pykin
-  $ python3 seup.py install or sudo python3 setup.py install
+  $ python3 setup.py install or sudo python3 setup.py install
   ~~~
 
 - pykin directory structure
