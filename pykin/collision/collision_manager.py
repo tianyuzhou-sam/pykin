@@ -272,7 +272,7 @@ class CollisionManager:
                 self._extract_name(contact.o1),
                 other_manager._extract_name(contact.o2),
             )
-            if (coll_names[0], coll_names[1]) in self.filtered_link_names:
+            if coll_names[0] in self.filtered_link_names and coll_names[1] in self.filtered_link_names:
                 continue
             if coll_names[0] is None:
                 coll_names = (
