@@ -158,3 +158,25 @@ class Robotiq140Gripper(Gripper):
             self.info[finger][3][:3, 3] = (
                 self.info[finger][3][:3, 3] - z_dis * self.info[finger][3][:3, 2]
             )
+
+class Gen3LiteGripper(Gripper):
+    def __init__(self):
+        gripper_name = "gen3_lite_gripper"
+        element_names = [
+            "RIGHT_FINGER_PROX", 
+            "RIGHT_FINGER_DIST",
+            "LEFT_FINGER_PROX", 
+            "LEFT_FINGER_DIST"
+        ]
+        max_width = 0.13
+        max_depth = 0.125
+        tcp_position = np.array([0, 0, 0])
+        finger_names = ["leftfinger", "rightfinger"]
+        super(Gen3LiteGripper, self).__init__(
+            gripper_name,
+            element_names,
+            max_width,
+            max_depth,
+            tcp_position,
+            finger_names,
+        )

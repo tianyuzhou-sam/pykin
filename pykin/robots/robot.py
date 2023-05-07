@@ -11,7 +11,7 @@ def handler(signum, frame):
 # Set the signal handler
 signal.signal(signal.SIGINT, handler)
 
-from pykin.robots.gripper import PandaGripper, Robotiq140Gripper
+from pykin.robots.gripper import PandaGripper, Robotiq140Gripper, Gen3LiteGripper
 from pykin.kinematics.transform import Transform
 from pykin.kinematics.kinematics import Kinematics
 from pykin.models.urdf_model import URDFModel
@@ -46,6 +46,8 @@ class Robot(URDFModel):
                 self.gripper = PandaGripper()
             if "robotiq140" in self.gripper_name:
                 self.gripper = Robotiq140Gripper()
+            if "gen3_lite" in self.gripper_name:
+                self.gripper = Gen3LiteGripper()
 
         self.joint_limits_lower = []
         self.joint_limits_upper = []
